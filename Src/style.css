@@ -1,0 +1,270 @@
+:root {
+  --primary: #f2f2f2;
+  --secondary: #000000;
+  --tri1: #b6b09f;
+  --tri2: #eae4d5;
+}
+
+@font-face {
+  font-family: Aeonik;
+  font-weight: 500;
+  src: url(/Fonts/fonnts.com-Aeonik-Regular.ttf);
+}
+@font-face {
+  font-family: Aeonik;
+  font-weight: 700;
+  src: url(/Fonts/fonnts.com-Aeonik-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main nav {
+  position: fixed;
+  width: 100%;
+  background-color: var(--secondary);
+  height: 60px;
+}
+main .allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+}
+main .allElems .elem {
+  color: white;
+  background-color: var(--tri1);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 400px;
+  width: 300px;
+  position: relative;
+  transition: all ease 0.1s;
+}
+main .allElems .elem:active {
+  scale: 0.95;
+}
+main .allElems .elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .allElems .elem h2 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2.3em;
+}
+main .fullElem {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  display: none;
+  font-size: 60px;
+  position: absolute;
+  color: white;
+}
+main .fullElem .back {
+  position: absolute;
+  right: 5%;
+  background-color: var(--tri1);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+main .fullElem .back:hover {
+  cursor: pointer;
+  scale: 0.95;
+}
+main .fullElem .back:active {
+  scale: 1;
+}
+main .todo-list-fullpage {
+  background-color: var(--secondary);
+}
+main .todo-list-fullpage h2 {
+  font-size: 65px;
+}
+main .todo-list-fullpage .todo-container {
+  margin-top: 3rem;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .todo-list-fullpage .todo-container .addTask {
+  width: 33%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--tri1);
+}
+main .todo-list-fullpage .todo-container .addTask form {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .todo-list-fullpage .todo-container .addTask form input {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+main .todo-list-fullpage .todo-container .addTask form textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 60%;
+  max-width: 100%;
+  max-height: 80%;
+  min-width: 100%;
+  min-height: 60%;
+}
+main .todo-list-fullpage .todo-container .addTask form .mark-imp {
+  display: flex;
+  gap: 1rem;
+}
+main .todo-list-fullpage .todo-container .addTask form .mark-imp input {
+  width: 10%;
+  scale: 0.5;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+main .todo-list-fullpage .todo-container .addTask form .mark-imp label {
+  width: 80%;
+  font-size: 2rem;
+  white-space: nowrap;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 20px;
+}
+main .todo-list-fullpage .todo-container .addTask form .mark-imp label:active {
+  scale: 0.95;
+}
+main .todo-list-fullpage .todo-container .addTask form .mark-imp label:hover {
+  cursor: pointer;
+}
+main .todo-list-fullpage .todo-container .addTask form button {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+main .todo-list-fullpage .todo-container .addTask form button:hover {
+  cursor: pointer;
+}
+main .todo-list-fullpage .todo-container .addTask form button:active {
+  scale: 0.95;
+}
+main .todo-list-fullpage .todo-container .allTask {
+  width: 60%;
+  height: 100%;
+  background-color: var(--tri1);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+}
+main .todo-list-fullpage .todo-container .allTask .task {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading h3 {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading h3 span {
+  background-color: var(--tri1);
+  color: black;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading h3 span.true {
+  display: initial;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading h3 span.false {
+  display: none;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading .task-modifications {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading .task-modifications button {
+  background-color: var(--tri2);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading .task-modifications button:active {
+  scale: 0.95;
+  cursor: pointer;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-heading .task-modifications button:hover {
+  cursor: pointer;
+}
+main .todo-list-fullpage .todo-container .allTask .task .task-detail p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  width: 70%;
+}/*# sourceMappingURL=style.css.map */
