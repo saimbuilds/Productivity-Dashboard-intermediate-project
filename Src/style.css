@@ -78,9 +78,9 @@ main .allElems .elem h2 {
 main .fullElem {
   height: 100%;
   width: 100%;
+  background-color: var(--secondary);
   padding: 40px;
   display: none;
-  font-size: 60px;
   position: absolute;
   color: white;
 }
@@ -100,9 +100,6 @@ main .fullElem .back:hover {
 }
 main .fullElem .back:active {
   scale: 1;
-}
-main .todo-list-fullpage {
-  background-color: var(--secondary);
 }
 main .todo-list-fullpage h2 {
   font-size: 65px;
@@ -267,4 +264,56 @@ main .todo-list-fullpage .todo-container .allTask .task .task-detail p {
   margin-top: 1rem;
   font-size: 1.2rem;
   width: 70%;
+}
+main .daily-planner-fullpage {
+  display: flex;
+  align-items: center;
+  display: block;
+}
+main .daily-planner-fullpage h1 {
+  font-size: 4rem;
+}
+main .daily-planner-fullpage .day-planner {
+  background-color: var(--tri1);
+  width: 100%;
+  margin-top: 40px;
+  height: 85%;
+  border-radius: 10px;
+  padding: 30px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+main .daily-planner-fullpage .day-planner::-webkit-scrollbar {
+  background-color: black;
+  border: 10px;
+}
+main .daily-planner-fullpage .day-planner::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+main .daily-planner-fullpage .day-planner .day-planner-time {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+main .daily-planner-fullpage .day-planner .day-planner-time p {
+  font-size: 1rem !important;
+  color: #f2f2f2;
+}
+main .daily-planner-fullpage .day-planner .day-planner-time input {
+  padding: 20px 40px;
+  width: 100%;
+  background-color: transparent;
+  font-size: 2rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: #f2f2f2;
 }/*# sourceMappingURL=style.css.map */
