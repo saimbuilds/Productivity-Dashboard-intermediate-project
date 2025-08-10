@@ -95,27 +95,35 @@ for (let i = 0; i < 18; i++) {
     `;
   dayPlanner.innerHTML = clutter;
 }
-
 let inputOfdayPlanner = document.querySelectorAll(".day-planner-time input");
 let inputValArr = [];
 let jsonArr = JSON.parse(localStorage.getItem("plannerDate")) || [];
+inputValArr = jsonArr;
+
 inputOfdayPlanner.forEach(function (input, idx) {
+  inputValArr.forEach(function (elem) {
+    if(idx == elem.index){
+
+      console.log(elem.input);
+    }
+  });
   input.addEventListener("blur", function () {
     if (input.value != "") {
       let foundPosition = inputValArr.findIndex((obj) => obj.index === idx);
-      
+
       if (foundPosition === -1) {
         inputValArr.push({
           input: input.value.trim(),
           index: idx,
         });
-        jsonArr.push(JSON.stringify(localStorage.setItem()))
-      }else{
-        inputValArr[foundPosition].input = input.value.trim()
+        jsonArr = inputValArr;
+        localStorage.setItem("plannerDate", JSON.stringify(jsonArr));
+      } else {
+        inputValArr[foundPosition].input = input.value.trim();
+        jsonArr = inputValArr;
+        localStorage.setItem("plannerDate", JSON.stringify(jsonArr));
       }
     }
-    console.log(inputValArr);
-    
   });
 });
 
